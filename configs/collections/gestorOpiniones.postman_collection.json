@@ -1,0 +1,937 @@
+{
+	"info": {
+		"_postman_id": "b9640916-2a68-4704-b30f-67cb0f1736b8",
+		"name": "gestorOpiniones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41656904"
+	},
+	"item": [
+		{
+			"name": "admins",
+			"item": [
+				{
+					"name": "categories",
+					"item": [
+						{
+							"name": "saveCategory",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNjgiLCJpYXQiOjE3NDA1MTkxMjksImV4cCI6MTc0MDUyMjcyOX0.Y5tBuTGCpUiBA_6-JmU0F5HbUEk8uaAfQwdMR0r00Fs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Paranormal\",\r\n    \"description\": \"Sucesos fuera de lo normal.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/categories/saveCategory",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"categories",
+										"saveCategory"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllCategories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/categories/findAllCategories?limite=10&desde=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"categories",
+										"findAllCategories"
+									],
+									"query": [
+										{
+											"key": "limite",
+											"value": "10"
+										},
+										{
+											"key": "desde",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findOneCategoryByName",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkMmQzNzJhYjA3YTA2MDJmMmI2YjciLCJpYXQiOjE3NDA0NTEyMTgsImV4cCI6MTc0MDQ1NDgxOH0.geti-rXXwpJe35Y10byDUU0n2ivZqqXKNaBXvGVGxdI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/categories/findOneCategoryByName/Paranormal",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"categories",
+										"findOneCategoryByName",
+										"Paranormal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "putCategoryById",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkMmQzNzJhYjA3YTA2MDJmMmI2YjciLCJpYXQiOjE3NDA0NTEyMTgsImV4cCI6MTc0MDQ1NDgxOH0.geti-rXXwpJe35Y10byDUU0n2ivZqqXKNaBXvGVGxdI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Meme\",\r\n    \"description\": \"Memes de Facebook.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/categories/putCategoryById/67bd2d9e27d62c5cdcb04fc3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"categories",
+										"putCategoryById",
+										"67bd2d9e27d62c5cdcb04fc3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteCategoryById",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNjgiLCJpYXQiOjE3NDA1MTkxMjksImV4cCI6MTc0MDUyMjcyOX0.Y5tBuTGCpUiBA_6-JmU0F5HbUEk8uaAfQwdMR0r00Fs",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/categories/deleteCategoryById/67be36eda021b8ef369b48f7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"categories",
+										"deleteCategoryById",
+										"67be36eda021b8ef369b48f7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "account profile",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"santosk@gmail.com\",\r\n  \"password\": \"santosk027\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllAdmins",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/admins/findAllAdmins?limite=10&desde=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"admins",
+										"findAllAdmins"
+									],
+									"query": [
+										{
+											"key": "limite",
+											"value": "10"
+										},
+										{
+											"key": "desde",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findOneAdminById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjYWEwYmMwOGM5MDFiY2U1YjE0NzciLCJpYXQiOjE3NDA0NDkwMzUsImV4cCI6MTc0MDQ1MjYzNX0.09-t87wTmpAVVoL1j-6CW7KlwdZlS-ivu6heCtj7zSU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/admins/findOneAdminById/67bcaa35c08c901bce5b147e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"admins",
+										"findOneAdminById",
+										"67bcaa35c08c901bce5b147e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "putAdminById",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjYWEwYmMwOGM5MDFiY2U1YjE0NzciLCJpYXQiOjE3NDA0MTc2NjMsImV4cCI6MTc0MDQyMTI2M30.VSPuakQA7GMS1iz5kE_aEc8Yl7T_6Qv4q2txHSi-ZtQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Jouse\",\n  \"surname\": \"Boror\",\n  \"username\": \"BororK\",\n  \"email\": \"borork@gmail.com\",\n  \"password\": \"borork027\",\n  \"phone\": \"12345678\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/admins/putAdminById/67bcaa7cc08c901bce5b1486",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"admins",
+										"putAdminById",
+										"67bcaa7cc08c901bce5b1486"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAdminById",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjYWEwYmMwOGM5MDFiY2U1YjE0NzciLCJpYXQiOjE3NDA0MTg1NTAsImV4cCI6MTc0MDQyMjE1MH0.4fNFMsCCsDPCEDjudGmtbNSUreB6DmOKo18XpO05E6A"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/admins/deleteAdminById/67bcaa7cc08c901bce5b1486",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"admins",
+										"deleteAdminById",
+										"67bcaa7cc08c901bce5b1486"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "account profile",
+					"item": [
+						{
+							"name": "registerUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Silvia\",\r\n  \"surname\": \"Orozco\",\r\n  \"username\": \"SilviaK\",\r\n  \"email\": \"silviak@gmail.com\",\r\n  \"password\": \"silviak027\",\r\n  \"phone\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/auth/registerUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"auth",
+										"registerUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"alexxok@gmail.com\",\r\n  \"password\": \"alexxok027\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllUsers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/users/findAllUsers?limite=10&desde=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"users",
+										"findAllUsers"
+									],
+									"query": [
+										{
+											"key": "limite",
+											"value": "10"
+										},
+										{
+											"key": "desde",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findOneUserById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZjJjNDg2NDFkODAyYWFlNjM3NWQiLCJpYXQiOjE3NDA0MzY3ODEsImV4cCI6MTc0MDQ0MDM4MX0.Wdcr4RFhrAJYroZnfx5dX6BHKNzFjYOCsKIbTJw4BsI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/users/findOneUserById/67bcf4968641d802aae6376b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"users",
+										"findOneUserById",
+										"67bcf4968641d802aae6376b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "putUserById",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZjJjNDg2NDFkODAyYWFlNjM3NWQiLCJpYXQiOjE3NDA0MzY3ODEsImV4cCI6MTc0MDQ0MDM4MX0.Wdcr4RFhrAJYroZnfx5dX6BHKNzFjYOCsKIbTJw4BsI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Juan\",\n  \"surname\": \"Orozco\",\n  \"username\": \"JuanK\",\n  \"email\": \"juank@gmail.com\",\n  \"password\": \"juank027\",\n  \"phone\": \"12345678\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/users/putUserById/67bcf4748641d802aae63767",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"users",
+										"putUserById",
+										"67bcf4748641d802aae63767"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "putPassword",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNmIiLCJpYXQiOjE3NDA1MjExMjIsImV4cCI6MTc0MDUyNDcyMn0.OZbo8uCcie2oG7UnHMGgEwVZZvHYr_ExI2EL3usrVMU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oldPassword\": \"alexxo027\",\r\n    \"newPassword\": \"alexxok027\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/users/putPassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"users",
+										"putPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZjJjNDg2NDFkODAyYWFlNjM3NWQiLCJpYXQiOjE3NDA0MzY3ODEsImV4cCI6MTc0MDQ0MDM4MX0.Wdcr4RFhrAJYroZnfx5dX6BHKNzFjYOCsKIbTJw4BsI"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/users/deleteUser/67bcf4748641d802aae63767",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"users",
+										"deleteUser",
+										"67bcf4748641d802aae63767"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "publicaciones",
+					"item": [
+						{
+							"name": "savePublicacion",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNmIiLCJpYXQiOjE3NDA1MTgxNjMsImV4cCI6MTc0MDUyMTc2M30.ppdfkp5YjnBZlPmoJ80QPbfN6TZNSlp8CnWZLXsng0M",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tittle\": \"Prueba 3\",\r\n    \"text\": \"P3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/publicaciones/savePublicacion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"publicaciones",
+										"savePublicacion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllPublicaciones",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/publicaciones/findAllPublicaciones?limite=10&desde=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"publicaciones",
+										"findAllPublicaciones"
+									],
+									"query": [
+										{
+											"key": "limite",
+											"value": "10"
+										},
+										{
+											"key": "desde",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findPublicacionesByCategoryId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNmIiLCJpYXQiOjE3NDA1MTkzODIsImV4cCI6MTc0MDUyMjk4Mn0.muXd3W3QXtUYexqJxtoHAVzEONFvHQMUsPRMLd8LfL0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/publicaciones/findPublicacionesByCategoryId/67be2e463e90a6a77fe10d6e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"publicaciones",
+										"findPublicacionesByCategoryId",
+										"67be2e463e90a6a77fe10d6e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "putPublicacionById",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNmIiLCJpYXQiOjE3NDA1MTk3NzMsImV4cCI6MTc0MDUyMzM3M30.Taj3ofskYTNxOvkMNOOgAd96945c3wuqakvTRjNWDOw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tittle\": \"Prueba 3\",\r\n    \"text\": \"P3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/publicaciones/putPublicacionById/67be378aa021b8ef369b490e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"publicaciones",
+										"putPublicacionById",
+										"67be378aa021b8ef369b490e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletePublicacionById",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNmIiLCJpYXQiOjE3NDA1MjAwNzAsImV4cCI6MTc0MDUyMzY3MH0.ZtLS-xwBglE1D2jc5L-HCJfxIk3HPmnDI7-zg-0AqSE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/publicaciones/deletePublicacionById/67be378aa021b8ef369b490e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"publicaciones",
+										"deletePublicacionById",
+										"67be378aa021b8ef369b490e"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "comments",
+					"item": [
+						{
+							"name": "saveComment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNmIiLCJpYXQiOjE3NDA1MjQyMTcsImV4cCI6MTc0MDUyNzgxN30.2bnHR7LkGhbTHNqeZm89MkWEU_RKv7h8DFisn53xzWE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content\": \"Si funciona mi programa gente!\",\r\n  \"publicacionId\": \"67be367af7c321758fa8c653\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/comments/saveComment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"comments",
+										"saveComment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllComments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/comments/findAllComments?limite=10&desde=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"comments",
+										"findAllComments"
+									],
+									"query": [
+										{
+											"key": "limite",
+											"value": "10"
+										},
+										{
+											"key": "desde",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "putCommentById",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNmIiLCJpYXQiOjE3NDA1MjUyODIsImV4cCI6MTc0MDUyODg4Mn0.d41LrP0PRoFx85ylfNwT5GeN8_ysYYJmU2Eu5Rwc0d8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content\": \"Si funciona mi código gente!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/comments/putCommentById/67be4f6f8ef68424fc683c21",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"comments",
+										"putCommentById",
+										"67be4f6f8ef68424fc683c21"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletePublicacionById",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlMmU0NjNlOTBhNmE3N2ZlMTBkNmIiLCJpYXQiOjE3NDA1MjUyODIsImV4cCI6MTc0MDUyODg4Mn0.d41LrP0PRoFx85ylfNwT5GeN8_ysYYJmU2Eu5Rwc0d8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3003/gestorOpiniones/v1/comments/deleteCommentById/67be4ce32b363de4cdd77a18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"gestorOpiniones",
+										"v1",
+										"comments",
+										"deleteCommentById",
+										"67be4ce32b363de4cdd77a18"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
